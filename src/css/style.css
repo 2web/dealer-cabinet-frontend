@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=fallback');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Additional styles */
+@import 'additional-styles/utility-patterns.css';
+@import 'additional-styles/range-slider.css';
+@import 'additional-styles/toggle-switch.css';
+@import 'additional-styles/flatpickr.css';
+@import 'additional-styles/theme.css';
+
+@import 'tailwindcss/utilities';
+
+@layer components {
+    .btn-primary {
+      @apply btn bg-regal-demetra hover:bg-regal-demetra/75 text-white active:translate-y-1;
+    }
+    .href-primary {
+      @apply text-regal-demetra hover:text-regal-demetra/75;
+    }
+    .href-secondary {
+      @apply text-black hover:text-black/75;
+    }
+    .checkbox-primary {
+        @apply form-checkbox bg-regal-demetra active:bg-regal-demetra checked:bg-regal-demetra/75;
+    }
+    .bg-sidebar-primary {
+        @apply bg-[#F5F5F5];
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
