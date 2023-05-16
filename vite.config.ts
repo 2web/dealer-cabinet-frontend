@@ -18,6 +18,7 @@ export default defineConfig({
     copy({
       pattern: [
         { from: "src/assets/images/", to: "assets/images" },
+        { from: "src/komm/", to: "assets/komm" },
         { from: "src/favicon.png", to: "/favicon.png" }
       ],
     })

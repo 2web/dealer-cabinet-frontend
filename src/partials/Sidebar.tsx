@@ -1,6 +1,7 @@
 import React, { FC, useState, useEffect, useRef } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import SidebarLinkGroup from "./SidebarLinkGroup";
+
 import LogoImage from '../assets/logo.svg';
 import IconUsers from '../assets/icon-users.svg';
 import IconOrders from '../assets/icon-orders.svg';
@@ -118,7 +119,7 @@ const Sidebar: FC<TSidebar> = ({ sidebarOpen, setSidebarOpen }) => {
             
             <ul className="mt-3">
               {/* Authentication */}
-              <SidebarLinkGroup>
+              <SidebarLinkGroup activecondition={pathname.includes("component")}>
                 {(handleClick, open) => {
                   return (
                     <React.Fragment>
@@ -197,7 +198,7 @@ const Sidebar: FC<TSidebar> = ({ sidebarOpen, setSidebarOpen }) => {
               </SidebarLinkGroup>
 
               {/* Orders */}
-              <SidebarLinkGroup>
+              <SidebarLinkGroup activecondition={pathname.includes("component")}>
                 {(handleClick, open) => {
                   return (
                     <React.Fragment>
