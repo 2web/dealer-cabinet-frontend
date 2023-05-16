@@ -6,7 +6,6 @@ import LogoImage from '../assets/logo.svg';
 import IconUsers from '../assets/icon-users.svg';
 import IconOrders from '../assets/icon-orders.svg';
 
-
 type TSidebar = {
   sidebarOpen?: boolean;
   setSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -118,7 +117,7 @@ const Sidebar: FC<TSidebar> = ({ sidebarOpen, setSidebarOpen }) => {
           <div>
             
             <ul className="mt-3">
-              {/* Authentication */}
+              {/* Pages */}
               <SidebarLinkGroup activecondition={pathname.includes("component")}>
                 {(handleClick, open) => {
                   return (
@@ -139,7 +138,7 @@ const Sidebar: FC<TSidebar> = ({ sidebarOpen, setSidebarOpen }) => {
                           <div className="flex items-center">
                             <img src={IconUsers} alt="" className="w-6 h-6 rounded-full" />
                             <span className="text-sm href-secondary font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                              Аутентификация
+                              Страницы для теста
                             </span>
                           </div>
                           {/* Icon */}
@@ -161,7 +160,7 @@ const Sidebar: FC<TSidebar> = ({ sidebarOpen, setSidebarOpen }) => {
                             <NavLink
                               end
                               to="/signin"
-                              className="block  transition duration-150 truncate"
+                              className="block transition duration-150 truncate link-smart"
                             >
                               <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                                 Войти
@@ -172,7 +171,7 @@ const Sidebar: FC<TSidebar> = ({ sidebarOpen, setSidebarOpen }) => {
                             <NavLink
                               end
                               to="/signup"
-                              className="block  transition duration-150 truncate"
+                              className="block transition duration-150 truncate link-smart"
                             >
                               <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                                 Зарегистрироваться
@@ -183,10 +182,21 @@ const Sidebar: FC<TSidebar> = ({ sidebarOpen, setSidebarOpen }) => {
                             <NavLink
                               end
                               to="/reset-password"
-                              className="block  transition duration-150 truncate"
+                              className="block  transition duration-150 truncate link-smart"
                             >
                               <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                                 Сбросить пароль
+                              </span>
+                            </NavLink>
+                          </li>
+                          <li className="mb-1 last:mb-0">
+                            <NavLink
+                              end
+                              to="/404"
+                              className="block  transition duration-150 truncate link-smart"
+                            >
+                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                                404
                               </span>
                             </NavLink>
                           </li>
@@ -198,7 +208,7 @@ const Sidebar: FC<TSidebar> = ({ sidebarOpen, setSidebarOpen }) => {
               </SidebarLinkGroup>
 
               {/* Orders */}
-              <SidebarLinkGroup activecondition={pathname.includes("component")}>
+              <SidebarLinkGroup activecondition={pathname.includes("order")}>
                 {(handleClick, open) => {
                   return (
                     <React.Fragment>
@@ -240,9 +250,10 @@ const Sidebar: FC<TSidebar> = ({ sidebarOpen, setSidebarOpen }) => {
                             <NavLink
                               end
                               to="/orders"
-                              className="block  transition duration-150 truncate"
+                              className={({ isActive, isPending }: { isActive: boolean; isPending: boolean }) =>
+                              isPending ? "pending" : isActive ? "font-black" : "block transition duration-150 truncate link-smart"}
                             >
-                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                              <span className="text-sm lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                                 Заказы
                               </span>
                             </NavLink>
@@ -251,9 +262,10 @@ const Sidebar: FC<TSidebar> = ({ sidebarOpen, setSidebarOpen }) => {
                             <NavLink
                               end
                               to="/order"
-                              className="block  transition duration-150 truncate"
+                              className={({ isActive, isPending }: { isActive: boolean; isPending: boolean }) =>
+                              isPending ? "pending" : isActive ? "font-black" : "block transition duration-150 truncate link-smart"}
                             >
-                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                              <span className="text-sm lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                                 Карточка заказа
                               </span>
                             </NavLink>
