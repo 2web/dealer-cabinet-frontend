@@ -1,13 +1,13 @@
 import { useState } from 'react';
 
 import Sidebar from '../../partials/Sidebar';
-// import Header from '../../partials/Header';
+import Header from '../../partials/Header';
 
 import Image from '../../assets/undefine.png';
 
 function AccountPanel() {
 
-  const [sync, setSync] = useState(false);
+//   const [sync, setSync] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -18,6 +18,8 @@ function AccountPanel() {
 
       {/* Content area */}
       <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden bg-white">
+        {/*  Site header */}
+        <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         <div className="grow">
         {/* Panel body */}
         <div className="p-6 space-y-6">

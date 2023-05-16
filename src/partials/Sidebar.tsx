@@ -1,11 +1,11 @@
 import React, { FC, useState, useEffect, useRef } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import SidebarLinkGroup from "./SidebarLinkGroup";
 
 import LogoImage from '../assets/logo.svg';
 import IconUsers from '../assets/icon-users.svg';
 import IconOrders from '../assets/icon-orders.svg';
-import UnDef from '../assets/undefine.png';
+
 
 type TSidebar = {
   sidebarOpen?: boolean;
@@ -523,11 +523,6 @@ const Sidebar: FC<TSidebar> = ({ sidebarOpen, setSidebarOpen }) => {
 
         {/* Expand / collapse button */}
         <div className="pt-3 hidden lg:flex lg:flex-col 2xl:hidden justify-start mt-auto ">
-          <div className="">
-            <Link className="block w-12 h-12" to="/settings">
-              <img src={UnDef} alt="" />
-            </Link>
-          </div>
           <div className="px-3 py-2">
             <button onClick={() => setSidebarExpanded(!sidebarExpanded)}>
               <span className="sr-only">Expand / collapse sidebar</span>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Sidebar from '../../partials/Sidebar';
-// import Header from '../../partials/Header';
+import Header from '../../partials/Header';
 
 import IconProf from '../../assets/icon-profstroy.png';
 import DefStatus from '../../assets/default-status.svg';
@@ -29,7 +29,7 @@ function Product() {
       <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
 
         {/*  Site header */}
-        {/* <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} /> */}
+        <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
         <main>
           <div className="px-4 sm:px-6 lg:px-8 py-8 w-full">
@@ -79,7 +79,7 @@ function Product() {
                   <p className="text-base flex flex-row mb-4">
                     <span className="block basis-48 font-semibold">Коммерческое предложение:</span>              
                     <span className="block">
-                        <a target="_blank" href="assets/komm/komm.html">
+                        <a target="_blank" href="/dealer-cabinet-frontend/assets/komm/komm.html">
                             <img className="inline-block mr-2" src={IconHtml} width="38" height="38" alt="N4-122344" />
                         </a>
                     </span>

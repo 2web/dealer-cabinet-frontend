@@ -11,6 +11,7 @@ export default defineConfig({
   css: {
     postcss,
   },
+  base: "/dealer-cabinet-frontend",
   plugins: [
     react({
       include: "**/*.tsx",
