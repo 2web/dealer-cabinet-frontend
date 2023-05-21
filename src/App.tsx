@@ -8,6 +8,7 @@ import {
 import './css/style.css';
 
 import PageNotFound from './pages/NotFound';
+import KnowledgeBase from './pages/utility/KnowledgeBase';
 import Welcome from './pages/Welcome';
 import Signin from './pages/Signin';
 import Signup from './pages/Signup';
@@ -16,6 +17,7 @@ import ResetPassword from './pages/ResetPassword';
 import Orders from './pages/Orders';
 import Order from './pages/Order';
 import AccountPanel from './pages/Settings';
+import SearchPanel from './pages/Search';
 
 function App() {
   const location = useLocation();
@@ -40,7 +42,9 @@ function App() {
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/order" element={<Order />} />
+        <Route path="/order-search" element={<SearchPanel />} />
         <Route path="/settings" element={<AccountPanel />} />
+        <Route path="/knowledge-base" element={<KnowledgeBase />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>

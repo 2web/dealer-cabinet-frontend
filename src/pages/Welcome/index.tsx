@@ -9,7 +9,7 @@ function Welcome() {
           <a href="https://demetra.ru" className={styles.logo}></a>
         </div>
         <div className={`${styles.blockwelcome}`}>
-          <Link to="/signin" className="btn-primary px-4">Войти в личный кабинет</Link>
+          <Link to="/knowledge-base" className="btn-primary px-4">Войти в личный кабинет</Link>
         </div>
     </div>
   );

@@ -200,6 +200,17 @@ const Sidebar: FC<TSidebar> = ({ sidebarOpen, setSidebarOpen }) => {
                               </span>
                             </NavLink>
                           </li>
+                          <li className="mb-1 last:mb-0">
+                            <NavLink
+                              end
+                              to="/knowledge-base"
+                              className="block  transition duration-150 truncate link-smart"
+                            >
+                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                                FAQ
+                              </span>
+                            </NavLink>
+                          </li>
                         </ul>
                       </div>
                     </React.Fragment>
@@ -246,6 +257,18 @@ const Sidebar: FC<TSidebar> = ({ sidebarOpen, setSidebarOpen }) => {
                       </a>
                       <div className="lg:hidden lg:sidebar-expanded:block 2xl:block">
                         <ul className={`pl-9 mt-1 ${!open && "hidden"}`}>
+                          <li className="mb-1 last:mb-0">
+                            <NavLink
+                              end
+                              to="/order-search"
+                              className={({ isActive, isPending }: { isActive: boolean; isPending: boolean }) =>
+                              isPending ? "pending" : isActive ? "font-black" : "block transition duration-150 truncate link-smart"}
+                            >
+                              <span className="text-sm lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                                Поиск заказа
+                              </span>
+                            </NavLink>
+                          </li>
                           <li className="mb-1 last:mb-0">
                             <NavLink
                               end
