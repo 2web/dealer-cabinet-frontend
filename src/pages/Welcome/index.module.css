@@ -26,9 +26,9 @@
     position: absolute;
     left: 50px;
     bottom: 0;
-    width: 370px;
+    width: calc(100vw - 100px);
     height: 310px;
-    background:  url(../assets/images/adress.png) no-repeat left top 130px;
+    /* background:  url(../assets/images/adress.png) no-repeat left top 130px; */
     background-size: contain;
 }
 
@@ -42,8 +42,14 @@
     }
     .blockwelcome{
         left: 20px;
-        height: 200px;
+        height: auto;
         background-position: left top 70px;
-        width: calc(100% - 20px);
+        width: calc(100% - 40px);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .blockwelcome{
+        width: calc(100% - 40px);
     }
 }
